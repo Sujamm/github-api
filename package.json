@@ -1,0 +1,24 @@
+{
+    "name": "github-api",
+    "version": "1.0.0",
+    "description": "Consume GitHub APIs to show the commit data.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsc-watch --onSuccess \"node ./dist/server.js\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sujamm/github-api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Sujamm/github-api/issues"
+    },
+    "homepage": "https://github.com/Sujamm/github-api#readme",
+    "dependencies": {
+        "tsc-watch": "^4.0.0",
+        "typescript": "^3.7.2"
+    }
+}

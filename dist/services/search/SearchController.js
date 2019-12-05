@@ -9,17 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const SearchController_1 = require("./SearchController");
-exports.default = [
-    {
-        path: "/",
-        method: "get",
-        handler: [
-            ({ query }, res) => __awaiter(void 0, void 0, void 0, function* () {
-                const result = yield SearchController_1.getCommitByUser(query.q);
-                res.status(200).send(result);
-            })
-        ]
+const Data_1 = require("./api/Data");
+exports.getCommitByUser = (q) => __awaiter(void 0, void 0, void 0, function* () {
+    if (q.length < 3) {
+        return {
+            type: "FeatureCollection",
+            features: []
+        };
     }
-];
-//# sourceMappingURL=routes.js.map
+    return yield Data_1.getCommits(q);
+});
+//# sourceMappingURL=SearchController.js.map
